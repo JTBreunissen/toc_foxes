@@ -65,3 +65,5 @@ group :test do
 end
 
 gem 'rails_12factor', group: :production
+
+gem 'bootstrap-sass', '~> 3.3.6'
