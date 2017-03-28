@@ -1,7 +1,5 @@
 require 'rails_helper'
-
 RSpec.describe Attend, type: :model do
-
   describe "validations" do
     it "is invalid without a first name" do
       attend = Attend.new(first_name: "")
@@ -26,8 +24,7 @@ RSpec.describe Attend, type: :model do
     it "is valid with right email format" do
       attend = Attend.new(email: "msibai@gmail.com")
       attend.valid?
-      expect(attend.valid).to be_valid
+      expect(attend).to be_valid
     end
-
   end
 end
