@@ -9,6 +9,16 @@
   </head>
 
   <body>
+
+  <%= render 'shared/navbar' %>
+  
+    <div class="container">
+      <% if notice.present? %>
+        <p class="alert alert-info" role="alert"><%= notice %></p>
+      <% elsif alert.present? %>
+        <p class="alert alert-danger" role="alert"><%= alert %></p>
+      <% end %>
+
     <%= yield %>
   </body>
 </html>
