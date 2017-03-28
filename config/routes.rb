@@ -11,7 +11,9 @@ Rails.application.routes.draw do
     resources :sponsor, only: [:show, :index]
   end
 
-  resources :workshop
+  resources :workshop do
+    resources :events 
+  end
 
   resources :sponsor do
     resources :event, only: [:show, :index]
