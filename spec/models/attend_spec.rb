@@ -18,6 +18,16 @@ RSpec.describe Attend, type: :model do
       attend.valid?
       expect(attend.errors).to have_key(:email)
     end
+    it "is invalid with wrong email format" do
+      attend = Attend.new(email: "msibai.com")
+      attend.valid?
+      expect(attend.errors).to have_key(:email)
+    end
+    it "is valid with right email format" do
+      attend = Attend.new(email: "msibai@gmail.com")
+      attend.valid?
+      expect(attend.valid).to be_valid
+    end
 
   end
 end
