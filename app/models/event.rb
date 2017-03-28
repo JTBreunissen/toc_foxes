@@ -1,8 +1,8 @@
 class Event < ApplicationRecord
-  has_one :workshop
+  belongs_to :workshop
   belongs_to :sponsor
-  has_many :attends
+  has_many :attendees
 
-  validates :title, presence: true, length: {maximum: 50}
-  validates :locatio, presence: true}
+  validates :title, presence: true}
+  validates :location, presence: true}
 end
