@@ -6,15 +6,17 @@ RSpec.describe "pages/attend.html.erb", type: :view do
       render
       response.should have_text("Pages#attend")
     end
-  end
-  
-  it "contains \"Taste of Code\"" do
-    render
-    response.should have_text("Taste of Code")
+
+    it "contains 'what will you learn' partial" do
+      render
+      response.should have_text("What will you learn")
+      response.should have_text("Professional developers technologies")
+    end
+
+    it "contains newsletter partial " do
+      render
+      response.should have_text("Join our newsletter")
+    end
   end
 
-  it "contains \"Beginner coding workshop\"" do
-    render
-    response.should have_text("Beginner coding workshop")
-  end
 end
