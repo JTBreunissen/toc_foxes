@@ -7,7 +7,4 @@ RSpec.describe "pages/sponsor.html.erb", type: :view do
       response.should have_text("Pages#sponsor")
     end
   end
-
-
-
 end
