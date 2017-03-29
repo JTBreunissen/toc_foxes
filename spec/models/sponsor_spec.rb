@@ -8,8 +8,7 @@ RSpec.describe Sponsor, type: :model do
     end
     it "is valid with a company name" do
       sponsor = Sponsor.new(company_name: "Codaisseur")
-      sponsor.valid?
-      expect(sponsor).to be_valid
+      expect(sponsor.valid?).to eq(true)
     end
   end
 end
