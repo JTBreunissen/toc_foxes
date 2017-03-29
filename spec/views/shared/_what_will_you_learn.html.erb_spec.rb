@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "pages/attend.html.erb" do
+describe "pages/shared/_what_will_you_learn.html.erb" do
   it "contains \"Professional developers technologies\"" do
     render
     rendered.should have_text("Professional developers technologies")
