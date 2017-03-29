@@ -6,5 +6,10 @@ RSpec.describe "pages/in_company.html.erb", type: :view do
       render
       response.should have_text("Pages#in_company")
     end
+
+    it "contains get_ready partial " do
+      render
+      response.should have_text("Get Ready for the Day")
+    end
   end
 end
