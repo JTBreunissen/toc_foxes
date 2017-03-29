@@ -1,4 +1,8 @@
-// application.scss
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+      border-color: #df676;
+      background: #df676;
+  }
