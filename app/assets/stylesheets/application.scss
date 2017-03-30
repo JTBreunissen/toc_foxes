@@ -1,14 +1,15 @@
+// application.scss
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-<<<<<<< HEAD
 
 // navbar
 
 .navbar-default {
-    background-color: #df6766;
-    border-color: #b44e4e;
-    border-bottom: 3px;
+    background-color: #4f9cad;
+    border-color: #b95352;
+    border-bottom: 3px ;
 }
 
 .navbar-default .navbar-brand {
@@ -18,37 +19,9 @@
     color: white;
 }
 
-// footer incompany
 
-footer h4 {
-    text-align: center;
-    color: white;
-    font-weight: normal;
-    font-size: 1em;
-    letter-spacing: 1px;
-}
-* {
-margin: 0;
-}
-html, body {
-height: 100%;
-}
-.page-wrap
-{ min-height: 100%;
-/* equal to footer height */
-margin-bottom: -175px;
-}
-.page-wrap:after
-{
-content: ""; display: block;
-}
-.site-footer, .page-wrap:after
-{
-height: 200px;
-}
-.site-footer {
-background: black;
-=======
+// home
+
 body,
 html {
     width: 100%;
@@ -67,7 +40,7 @@ h6 {
 }
 
 .btn-group-lg>.btn, .btn-lg {
-    padding: 10px 40px;
+    padding: 10px 100px;
     font-size: 18px;
     line-height: 2;
     border-radius: 3px;
@@ -85,7 +58,7 @@ h6 {
 
 .intro-header {
     padding-top: 50px;
-    padding-bottom: 170px;
+  padding-bottom: 30px;
     text-align: center;
     color: #f8f8f8;
     background-color: #4f9cad;
@@ -108,8 +81,39 @@ h6 {
 }
 
 .intro-divider {
-    width: 400px;
+    // width: 1000px;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
->>>>>>> 6627421ab0a50f4c473313447b744a185205c308
+}
+
+// footer incompany
+
+footer h4 {
+    text-align: center;
+    color: white;
+    font-weight: normal;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+* {
+margin: 0;
+}
+html, body {
+height: 100%;
+}
+.page-wrap
+{ min-height: 100%;
+/* equal to footer height */
+margin-bottom: -100px;
+}
+.page-wrap:after
+{
+content: ""; display: block;
+}
+.site-footer, .page-wrap:after
+{
+height: 100px;
+}
+.site-footer {
+background: #df6766;
 }
