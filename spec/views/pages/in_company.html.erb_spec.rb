@@ -6,5 +6,10 @@ RSpec.describe "pages/in_company.html.erb", type: :view do
       render
       response.should have_text("Pages#in_company")
     end
+
+    it "contains Host next TOC partial " do
+       render
+       response.should have_text("Host next TOC")
+    end
   end
 end
