@@ -8,6 +8,6 @@ describe "shared/_company_banner.html.erb" do
 
   it "Begginer Coding workshop" do
     render
-    response.should have_text("Begginer Coding Workshop")
+    response.should have_text("Beginner Coding Workshop")
   end
 end
