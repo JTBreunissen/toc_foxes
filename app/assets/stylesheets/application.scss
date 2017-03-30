@@ -4,9 +4,30 @@
 @import "bootstrap";
 
 
+// navbar
+
+.navbar-default {
+    background-color: #df6766;
+    border-color: #b44e4e;
+    border-bottom: 3px;
+}
+
+.navbar-default .navbar-brand {
+    color: white;
+}
+.navbar-default .navbar-nav > li > a {
+    color: white;
+}
+
 // footer incompany
 
-
+footer h4 {
+    text-align: center;
+    color: white;
+    font-weight: normal;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
 * {
 margin: 0;
 }
@@ -16,7 +37,7 @@ height: 100%;
 .page-wrap
 { min-height: 100%;
 /* equal to footer height */
-margin-bottom: -142px;
+margin-bottom: -175px;
 }
 .page-wrap:after
 {
