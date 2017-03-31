@@ -1,0 +1,2 @@
+module InCompanyRequestHelper
+end

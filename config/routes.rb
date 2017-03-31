@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
-  root to: 'pages#home'
+ root to: 'pages#home'
 
-  get '/', to: 'pages#home'
-  get '/attend', to: 'pages#attend'
-  get '/in_company', to: 'pages#in_company'
-  get '/sponsor', to: 'pages#sponsor'
+ get '/', to: 'pages#home'
+ get '/attend', to: 'pages#attend'
+ get '/in_company', to: 'pages#in_company'
+  post '/in_company', to: 'in_company_requests#create'
+ get '/sponsor', to: 'pages#sponsor'
+
 
   devise_for :users
   #resources :attend
@@ -15,10 +17,12 @@ Rails.application.routes.draw do
   #resources :sponsor
   resources :workshops
   #resources :in_company
+  resources :in_company_requests, only:[:create]
+
 
   namespace :admin do
-    resources :workshops, :in_company_request,
-    :events, :sponsor, :sponsor_request, :review, :sponsors
+    resources :workshops, :in_company_requests,
+    :events, :sponsor_request, :review, :sponsors
    get '/', to: 'pages#home'
  end
 end

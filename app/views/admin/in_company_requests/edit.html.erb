@@ -1,0 +1,14 @@
+<%= render "shared/sidebar" %>
+<div class="container">
+  <div class="row">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>"Edit In-Company Request"</h3>
+      </div>
+      <div class="panel-body">
+        <%= render "form" %>
+      </div>
+    </div>
+    <%= link_to "Back", admin_in_company_request_path, class: "btn btn-default" %>
+  </div>
+</div>

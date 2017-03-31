@@ -1,0 +1,16 @@
+<%= render "shared/sidebar" %>
+  <div class="container">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><%= @in_company_request.company_name %></div>
+      <div class="panel-body">
+        <p>Company: <%= @in_company_request.company_name %></p>
+        <p>Name: <%= @in_company_request.first_name %> <%= @in_company_request.last_name %></p>
+        <p>Email: <%= @in_company_request.email %></p>
+        <p>Date: <%= @in_company_request.date %></p>
+        <p>Spaces Available: <%= @in_company_request.spaces_available %></p>
+        <p>Comments: <%= @in_company_request.comments %></p>
+
+      </div>
+    </div>
+      <%= link_to "Edit", edit_admin_in_company_request_path, class: "btn btn-default" %>
+  </div>
