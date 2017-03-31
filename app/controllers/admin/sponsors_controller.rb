@@ -13,9 +13,9 @@ before_action :set_sponsor, only: [:show, :edit, :update]
     @sponsor = Sponsor.new(sponsor_params)
 
     if @sponsor.save
-      redirect_to admin_sponsors_index, :notice => "Sponsor successfully created"
+      redirect_to admin_sponsors_url, :notice => "Sponsor successfully created"
     else
-      redirect_to admin_sponsors_index, :alert => "Please fill in all required fields"
+      redirect_to admin_sponsors_url, :alert => "Please fill in all required fields"
     end
   end
 
