@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 describe "routing to admin pages" do
-  it "routes /admin/attend to admin/attend#index" do
-    expect(get: "/admin/attend").to route_to(
-    controller: "admin/attend",
+  it "routes /admin/event to admin/event#index" do
+    expect(get: "/admin/event").to route_to(
+    controller: "admin/event",
     action: "index"
 )
 
