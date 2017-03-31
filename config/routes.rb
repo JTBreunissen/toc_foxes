@@ -17,6 +17,6 @@ Rails.application.routes.draw do
   #resources :in_company
 
   namespace :admin do
-    resources :attend, :in_company, :sponsors
+    resources :attend, :in_company, :sponsor, :sponsors
   end
 end
