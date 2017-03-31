@@ -8,28 +8,28 @@ event1 = Event.create!( { title: "Taste of Beerski", location: "Putins place", s
 
 sponsor1 = Sponsor.create! ({
   company_name: "Codaisseur",
-  logo: "https://www.codaisseur.com/assets/codaisseur-logo-long-2e9b7b7b839a33128016eb77b49ff2bb6397b6b3552523ee09273d6a5b427861.png"
+  logo: "https://pbs.twimg.com/profile_images/679634619998842880/L9Y-i7rM.jpg"
   })
 sponsor2 = Sponsor.create! ({
   company_name: "TQ",
   logo: "http://tasteofcode.nl/images/sponsors/tq.png"
   })
 sponsor3 = Sponsor.create! ({
-  company_name: "nco",
-  logo: "http://tasteofcode.nl/images/sponsors/comptoir.png"
+  company_name: "Le comptoir de l'innovation",
+  logo: "https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAeuAAAAJGY4ZWEwYjk3LWFjMjUtNGE3Ni04Zjc3LWYwOTlhNzM5NDA5Zg.png"
   })
 sponsor4 = Sponsor.create! ({
   company_name: "Rabobank",
-  logo: "http://tasteofcode.nl/images/sponsors/rabobank_long.png"
+  logo: "https://pbs.twimg.com/profile_images/492216223656980480/Ilok7Xou.png"
   })
 sponsor5 = Sponsor.create! ({
-  company_name: "tomtom",
-  logo: "http://tasteofcode.nl/images/sponsors/tomtom.png"
+  company_name: "TomTom",
+  logo: "http://nl.pcmweb.s3-eu-west-1.amazonaws.com/thumbnails/256x256/615dc/tomtom-logo.png"
   })
 
 
 
-  icr1 = InCompanyRequest.create (
+  icr1 = InCompanyRequest.create(
     first_name: "Frits",
     last_name: "Barend",
     company_name: "Shell",
@@ -41,7 +41,7 @@ sponsor5 = Sponsor.create! ({
     unknown printer took a galley of type and scrambled it to make a type specimen book."
   )
 
-  icr2 = InCompanyRequest.create (
+  icr2 = InCompanyRequest.create(
     first_name: "Henk",
     last_name: "Jansen",
     company_name: "AbnAmro",
@@ -54,7 +54,7 @@ sponsor5 = Sponsor.create! ({
   )
 
 
-  icr3 = InCompanyRequest.create (
+  icr3 = InCompanyRequest.create(
     first_name: "Karel",
     last_name: "Klaassen",
     company_name: "Google",
@@ -67,7 +67,7 @@ sponsor5 = Sponsor.create! ({
   )
 
 
-  icr4 = InCompanyRequest.create (
+  icr4 = InCompanyRequest.create(
     first_name: "Piet",
     last_name: "Verkerk",
     company_name: "Booking",
@@ -80,7 +80,7 @@ sponsor5 = Sponsor.create! ({
   )
 
 
-  icr5 = InCompanyRequest.create (
+  icr5 = InCompanyRequest.create(
     first_name: "Frits",
     last_name: "Barend",
     company_name: "Shell",
