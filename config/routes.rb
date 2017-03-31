@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   #resources :in_company
 
   namespace :admin do
-    resources :attend, :in_company, :sponsor
+    resources :workshop, :in_company_request,
+    :event, :sponsor, :sponsor_request, :review
+    get '/', to: 'pages#home'
   end
 end
