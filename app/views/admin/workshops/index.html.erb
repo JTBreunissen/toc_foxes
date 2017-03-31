@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <% flash.each do |key, value| %>
+     <%= content_tag :div, value, class: "flash #{key}" %>
+    <% end %>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>Workshops</h3>
+      </div>
+      <div class="panel-body">
+        <div class="container">
+          <div class="row">
+            <% @workshops.each do |workshop| %>
+            <div class="col-md-7">
+             <h4><%= link_to workshop.title, admin_workshop_url(workshop) %></h4><hr>
+          </div>
+          <div class="col-md-3 right">
+            <%= link_to "View", admin_workshop_path(workshop), class: "btn btn-default" %>
+            <%= link_to "Edit", edit_admin_workshop_path(workshop), class: "btn btn-default" %>
+            <%= link_to "Delete", admin_workshop_path(workshop), class: "btn btn-default", :confirm => "Are you sure?", :method => :delete %>
+          </div>
+          <% end %>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3>"Add new workshop"</h3>
+      </div>
+      <div class="panel-body">
+        <div class="container">
+          <div class="row">
+            <%= link_to "New Workshop", new_admin_workshop_url, class: "btn btn-default" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,6 +1,7 @@
 Event.delete_all
 Sponsor.delete_all
 InCompanyRequest.delete_all
+Workshop.destroy_all
 
 event1 = Event.create!( { title: "Taste of code", location: "Amsterdam", spaces_available: 678, public: true, image: "https://pbs.twimg.com/media/CuzWcg2XEAAqBM2.jpg", date: 12.days.from_now } )
 event1 = Event.create!( { title: "Taste of BBQ", location: "A place far far away", spaces_available: 2, public: true, image: "http://www.ondernemersscherpenzeel.nl/wp-content/uploads/2016/03/BBQ.jpg", date: 13.days.from_now  } )
@@ -27,6 +28,10 @@ sponsor5 = Sponsor.create! ({
   logo: "http://tasteofcode.nl/images/sponsors/tomtom.png"
   })
 
+workshop1 = Workshop.create!({title: "JS", description:"Creating new TOC",image:"http://workitacademy.com/wp-content/uploads/2014/04/teacher-workshop.jpg",link_to_live_demo:"",link_to_github:""})
+workshop2 = Workshop.create!({title: "Rails", description:"Creating new TOC",image:"http://workitacademy.com/wp-content/uploads/2014/04/teacher-workshop.jpg",link_to_live_demo:"",link_to_github:""})
+workshop3 = Workshop.create!({title: "CSS", description:"Creating new TOC",image:"http://workitacademy.com/wp-content/uploads/2014/04/teacher-workshop.jpg",link_to_live_demo:"",link_to_github:""})
+workshop4 = Workshop.create!({title: "Ruby", description:"Creating new TOC",image:"http://workitacademy.com/wp-content/uploads/2014/04/teacher-workshop.jpg",link_to_live_demo:"",link_to_github:""})
 
 
   icr1 = InCompanyRequest.create (
@@ -91,3 +96,4 @@ sponsor5 = Sponsor.create! ({
     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
     unknown printer took a galley of type and scrambled it to make a type specimen book."
   )
+

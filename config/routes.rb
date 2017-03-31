@@ -7,16 +7,18 @@ Rails.application.routes.draw do
   post '/in_company', to: 'in_company_requests#create'
  get '/sponsor', to: 'pages#sponsor'
 
- devise_for :users
- #resources :attend
- resources :events
- # do
- #   resources :attend
- # end
- #resources :sponsor
- resources :workshop
- #resources :in_company
+
+  devise_for :users
+  #resources :attend
+  resources :events
+  # do
+  #   resources :attend
+  # end
+  #resources :sponsor
+  resources :workshops
+  #resources :in_company
   resources :in_company_requests, only:[:create]
+
 
   namespace :admin do
     resources :workshops, :in_company_requests,
