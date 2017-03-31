@@ -12,5 +12,10 @@ RSpec.describe "pages/in_company.html.erb", type: :view do
       response.should have_text("Choose your course")
       response.should have_text("Get to know our different types of workshops")
     end
+      
+    it "contains get_ready partial " do
+      render
+      response.should have_text("Get Ready for the Day")
+    end
   end
 end
