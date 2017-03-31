@@ -26,7 +26,11 @@
             <h4>in_company_request.email</h4>
           </div>
           <div class="col-md-3">
-            <h4>in_company_request.email</h4>
+            <h4>
+              <%= link_to "View", admin_in_company_request_path(in_company_request), class: "btn btn-default" %>
+              <%= link_to "Edit", edit_admin__in_company_request_path(in_company_request), class: "btn btn-default" %>
+              <%= link_to "Delete", admin__in_company_request_path(in_company_request), class: "btn btn-default", :confirm => "Are you sure?", :method => :delete %>
+            </h4>
           </div>
           <% end %>
         </div>
