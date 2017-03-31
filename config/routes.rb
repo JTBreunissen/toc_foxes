@@ -5,14 +5,14 @@ Rails.application.routes.draw do
   get '/attend', to: 'pages#attend'
   get '/in_company', to: 'pages#in_company'
   get '/sponsor', to: 'pages#sponsor'
+  get '/admin/events', to: 'admin/events#index'
+  get '/admin/event/new' => "event#new", as: :new_event
+  get '/admin/event/:id' => 'event#show', as: :event
+  get '/admin/event/:id/edit' => 'event#edit', as: :edit_event
 
-  devise_for :users
-  #resources :attend
-  resources :events
-  # do
-  #   resources :attend
-  # end
-  #resources :sponsor
-  resources :workshop
-  #resources :in_company
+ patch "admin/events/:id" => "event#update"
+
+namespace :admin do
+  resources :attend, :in_company, :sponsors, :events
+end
 end

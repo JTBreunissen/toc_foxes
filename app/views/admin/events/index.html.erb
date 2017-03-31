@@ -1,0 +1,12 @@
+<h1>events</h1>
+
+<% @events.each do |event| %>
+<p><strong></strong> <%= event.title %>
+<strong>Location:   </strong><%= event.location %>
+<strong>Spaces available:   </strong><%= event.spaces_available %>
+<strong>Image:   </strong><%= event.image %></p>
+<%= link_to "[Show]", admin_event_path(event.id) %>
+<%= link_to "[Delete]", admin_events_path(event.id), method: :destroy, data: { confirm: "Are you sure?" } %>
+
+<hr>
+<% end %>
