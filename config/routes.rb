@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   #resources :sponsor
   resources :workshop
   #resources :in_company
+
   namespace :admin do
     resources :workshops, :in_company_request,
     :events, :sponsor, :sponsor_request, :review, :sponsors
