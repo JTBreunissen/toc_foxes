@@ -4,32 +4,20 @@
       <div class="col-md-6 col-md-offset-3" class="center-block">
         <h1 class="text-center">Book TOC</h1>
         <h3 class="text-center">Talk to us</h3>
-        <form>
-          <div class="form-group">
-            <input type="first_name" class="form-control" placeholder="First Name">
-          </div>
-          <div class="form-group">
-            <input type="last_name" class="form-control" placeholder="Last Name">
-          </div>
-          <div class="form-group">
-            <input type="company_name" class="form-control" placeholder="Company Name">
-          </div>
-          <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <input type="date" id="myDate" class="form-control" placeholder="Date">
-          </div>
-          <div class="form-group">
-            <input type="number" class="form-control" placeholder="Number of participants">
-          </div>
-          <div class="form-group">
-            <textarea class="form-control" rows="10" cols="75" placeholder="Comments"></textarea>
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn btn-default">Submit</button>
-          </div>
-        </form>
+        <div class="container-fluid">
+          <div class="row">
+            <%= form_for :in_company_request do |f| %>
+              <div class="form-group"><%= f.text_field :first_name, class: "form-control", placeholder: "First Name" %></div>
+              <div class="form-group"><%= f.text_field :last_name, class: "form-control", placeholder: "Last Name" %></div>
+              <div class="form-group"><%= f.text_field :company_name, class: "form-control", placeholder: "Company Name" %></div>
+              <div class="form-group"><%= f.text_field :email, class: "form-control", placeholder: "Email" %></div>
+              <div class="form-group"><%= f.collection_select :workshop_id, Workshop.order(:title), :id, :title, prompt: "Please choose a Workshop", class: "form-control" %></div>
+              <div class="form-group"><%= f.text_field :date, data: { behavior: "datepicker" }, class: "form-control", placeholder: "DD-MM-YYYY"  %></div>
+              <div class="form-group"><%= f.text_field :spaces_available, class: "form-control", placeholder: "Number of participants" %></div>
+              <div class="form-group"><%= f.text_field :comments, class: "form-control", placeholder: "Comments" %></div>
+              <div class="text-center"><%= f.submit :Submit, class: 'btn btn-success' %></div>
+            <% end %>
+        </div>
       </div>
     </div>
   </div>

@@ -26,6 +26,20 @@ ActiveRecord::Schema.define(version: 20170331100350) do
     t.date     "date"
   end
 
+  create_table "in_company_requests", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "company_name"
+    t.string   "email"
+    t.date     "date"
+    t.integer  "spaces_available"
+    t.text     "comments"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "workshop_id"
+    t.index ["workshop_id"], name: "index_in_company_requests_on_workshop_id", using: :btree
+  end
+
   create_table "sponsors", force: :cascade do |t|
     t.string   "company_name"
     t.string   "logo"
@@ -33,10 +47,8 @@ ActiveRecord::Schema.define(version: 20170331100350) do
     t.datetime "updated_at",   null: false
   end
 
-  create_table "subscribers", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
+  create_table "tests", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -68,4 +80,5 @@ ActiveRecord::Schema.define(version: 20170331100350) do
     t.datetime "updated_at",        null: false
   end
 
+  add_foreign_key "in_company_requests", "workshops"
 end

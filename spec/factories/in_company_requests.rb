@@ -4,7 +4,7 @@ FactoryGirl.define do
     last_name "MyString"
     company_name "MyString"
     email "MyString"
-    date "2017-03-30"
+    date Date.new(2017, 12, 3)
     spaces_available 1
     comments "MyText"
   end
