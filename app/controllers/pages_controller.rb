@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+before_action :set_sponsors
+
   def home
   end
 
@@ -9,5 +11,11 @@ class PagesController < ApplicationController
   end
 
   def sponsor
+  end
+
+  private
+
+  def set_sponsors
+    @sponsors = Sponsor.all
   end
 end
