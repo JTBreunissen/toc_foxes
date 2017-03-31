@@ -1,8 +1,10 @@
 class Admin::InCompanyRequestController < ApplicationController
-  before action :workshop, only: [:index, :show ]
+  before_action :set_workshop, only: [:index, :show ]
+  before_action :set_in_company_requests
+  before_action :set_in_company_request, only: [:show, :edit, :update, :destroy, :create]
 
   def create
-    event = Event.new(params)
+    event = Event.new
     event.title = @in_company_request.company_name
     event.spaces_available = @in_company_request.spaces_available
     event.title = @in_company_request.company_name
@@ -12,26 +14,23 @@ class Admin::InCompanyRequestController < ApplicationController
   end
 
   def index
-    @in_company_requests = InCompanyRequest.all
   end
 
   def show
-    @in_company_request = InCompanyRequest.find(params[:id])
   end
 
   def update
-    in_company_request = InCompanyRequest.find(params[:id])
-    in_company_request.update!(in_company_request_params)
-    redirect_to in_company_request
+    if @in_company_request.update_attributes(in_company_request_params)
+      redirect_to admin_in_company_request_url, :notice => "In-Company Request successfully updated"
+    else
+      redirect_to admin_in_company_request_url, :alert => "Please fill in all required fields"
+    end
   end
 
   def destroy
-    in_company_request = InCompanyRequest.find(params[:id])
-    in_company_request.destroy
+    @in_company_request.destroy
+    redirect_to admin_in_company_request_url, :notice => "In-Company Request has been deleted"
   end
-
-
-
 
 
   private
@@ -42,8 +41,18 @@ class Admin::InCompanyRequestController < ApplicationController
         :workshop_id)
     end
 
-    def workshop
+    def set_workshop
       @workshop = Workshop.find(params[:workshop_id])
     end
+
+    def set_in_company_requests
+      @in_company_requests = InCompanyRequest.all
+    end
+
+    def set_in_company_request
+      @in_company_request = InCompanyRequest.find(params[:id])
+    end
+
+
 
 end

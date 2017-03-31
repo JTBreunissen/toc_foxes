@@ -13,64 +13,64 @@ Sponsor.create ({
   })
 end
 
-icr1 = InCompanyRequest.create (
-  first_name: "Frits"
-  last_name: "Barend"
-  company_name: "Shell"
-  email: "frits@shell.com"
-  date: "13-5-2017"
-  spaces_available: 20
+icr1 = InCompanyRequest.create(
+  first_name: "Frits",
+  last_name: "Barend",
+  company_name: "Shell",
+  email: "frits@shell.com",
+  date: "13-5-2017",
+  spaces_available: 20,
   comments: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
   unknown printer took a galley of type and scrambled it to make a type specimen book."
 )
 
-icr2 = InCompanyRequest.create (
-  first_name: "Henk"
-  last_name: "Jansen"
-  company_name: "AbnAmro"
-  email: "henk@abnamro.com"
-  date: "13-6-2017"
-  spaces_available: 20
-  comments: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-  unknown printer took a galley of type and scrambled it to make a type specimen book."
-)
-
-
-icr3 = InCompanyRequest.create (
-  first_name: "Karel"
-  last_name: "Klaassen"
-  company_name: "Google"
-  email: "karel@gmail.com"
-  date: "16-7-2017"
-  spaces_available: 10
+icr2 = InCompanyRequest.create(
+  first_name: "Henk",
+  last_name: "Jansen",
+  company_name: "AbnAmro",
+  email: "henk@abnamro.com",
+  date: "13-6-2017",
+  spaces_available: 20,
   comments: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
   unknown printer took a galley of type and scrambled it to make a type specimen book."
 )
 
 
-icr4 = InCompanyRequest.create (
-  first_name: "Piet"
-  last_name: "Verkerk"
-  company_name: "Booking"
-  email: "piet@bookin.com"
-  date: "13-5-2017"
-  spaces_available: 30
+icr3 = InCompanyRequest.create(
+  first_name: "Karel",
+  last_name: "Klaassen",
+  company_name: "Google",
+  email: "karel@gmail.com",
+  date: "16-7-2017",
+  spaces_available: 10,
   comments: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
   unknown printer took a galley of type and scrambled it to make a type specimen book."
 )
 
 
-icr5 = InCompanyRequest.create (
-  first_name: "Frits"
-  last_name: "Barend"
-  company_name: "Shell"
-  email: "frits@shell.com"
-  date: "23-8-2017"
-  spaces_available: 20
+icr4 = InCompanyRequest.create(
+  first_name: "Piet",
+  last_name: "Verkerk",
+  company_name: "Booking",
+  email: "piet@bookin.com",
+  date: "13-5-2017",
+  spaces_available: 30,
+  comments: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+  unknown printer took a galley of type and scrambled it to make a type specimen book."
+)
+
+
+icr5 = InCompanyRequest.create(
+  first_name: "Frits",
+  last_name: "Barend",
+  company_name: "Shell",
+  email: "frits@shell.com",
+  date: "23-8-2017",
+  spaces_available: 20,
   comments: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
   Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
   unknown printer took a galley of type and scrambled it to make a type specimen book."
