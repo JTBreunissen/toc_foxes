@@ -4,7 +4,7 @@ RSpec.describe "pages/in_company.html.erb", type: :view do
   describe "rendering in_company page" do
     it "contains \"Pages#in_company\"" do
       render
-      response.should have_text("Pages#in_company")
+      expect(response).to have_text("Pages#in_company")
     end
 
     it "contains choose_course partial " do
