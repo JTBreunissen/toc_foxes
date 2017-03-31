@@ -1,7 +1,14 @@
 class Admin::InCompanyRequestController < ApplicationController
+  before action :workshop, only: [:index, :show ]
 
   def create
-    @in_company_request = InCompanyRequest.new(in_company_request_params)
+    event = Event.new(params)
+    event.title = @in_company_request.company_name
+    event.spaces_available = @in_company_request.spaces_available
+    event.title = @in_company_request.company_name
+    event.public = false
+    event.date = @in_company_request.date
+    event.save!
   end
 
   def index
@@ -35,5 +42,8 @@ class Admin::InCompanyRequestController < ApplicationController
         :workshop_id)
     end
 
+    def workshop
+      @workshop = Workshop.find(params[:workshop_id])
+    end
 
 end
