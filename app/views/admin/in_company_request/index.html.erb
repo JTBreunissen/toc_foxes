@@ -6,26 +6,31 @@
     <div class="col-md-10 col-md-offset-1" class="center-block">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-md-3">
             <h4><strong>Workshop</strong></h4>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <h4><strong>Company</strong></h4>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <h4><strong>Email</strong></h4>
           </div>
-            <% @in_company_requests.each do |in_company_request| %>
-            <div class="col-md-4">
-              <h4>in_company_request.orkshop</h4>
-            </div>
-
-            <h4>
-        <div class="caption">
-          <h3><%= link_to artist.name, artist_path(artist.id) %></h3>
+          <% @in_company_requests.each do |in_company_request| %>
+          <div class="col-md-3">
+            <h4>in_company_request.workshop.title</h4>
+          </div>
+          <div class="col-md-3">
+            <h4>in_company_request.company_name</h4>
+          </div>
+          <div class="col-md-3">
+            <h4>in_company_request.email</h4>
+          </div>
+          <div class="col-md-3">
+            <h4>in_company_request.email</h4>
+          </div>
+          <% end %>
         </div>
       </div>
-      <% end %>
     </div>
   </div>
 </div>

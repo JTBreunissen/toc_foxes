@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1" class="center-block">
+      <%= form_for @in_company_request(params[:id]) do |f| %>
+        <div class="form-group"><%= f.text_field :first_name, class: "form-control", value: f.first_name %></div>
+        <div class="form-group"><%= f.text_field :last_name, class: "form-control", value: f.first_name %></div>
+        <div class="form-group"><%= f.text_field :company_name, class: "form-control", value: f.first_name %></div>
+        <div class="form-group"><%= f.text_field :email, class: "form-control", value: f.first_name %></div>
+        <div class="form-group"><%= f.collection_select :workshop_id, Workshop.order(:title), :id, :title, value: f.workshop.title, class: "form-control" %></div>
+        <div class="form-group"><%= f.text_field :date, data: { behavior: "datepicker" }, class: "form-control", placeholder: "DD-MM-YYYY"  %></div>
+        <div class="form-group"><%= f.text_field :spaces_available, class: "form-control", placeholder: "Number of participants" %></div>
+        <div class="form-group"><%= f.text_field :comments, class: "form-control", placeholder: "Comments" %></div>
+        <div class="text-center"><%= f.submit "Create Event", class: 'btn btn-success' %></div>
+      <% end %>
+
+
+
+<% @songs.each do |song| %>
+  <div class="panel panel-default">
+    <div class="panel-heading preview">
+      <%= song.title %>
+    </div>
+    <div class="panel-body">
+      <%= link_to "Delete Song", [song.artist, song], class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>
+  </div>
+<% end %>
+
+
+<%= link_to "Delete Artist", artist_path(@artist), class: "btn btn-default", method: :delete, data: { confirm: "Are you sure?" } %>
