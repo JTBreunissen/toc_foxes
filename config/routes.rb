@@ -15,10 +15,11 @@ Rails.application.routes.draw do
  #resources :sponsor
  resources :workshop
  #resources :in_company
+  resources :in_company_requests, only:[:create]
 
- namespace :admin do
-   resources :workshops, :in_company_request,
-   :events, :sponsor_request, :review, :sponsors
-  get '/', to: 'pages#home'
-end
+  namespace :admin do
+    resources :workshops, :in_company_requests,
+    :events, :sponsor, :sponsor_request, :review, :sponsors
+   get '/', to: 'pages#home'
+ end
 end
