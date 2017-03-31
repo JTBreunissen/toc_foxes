@@ -12,16 +12,16 @@
           <div class="row">
             <% @in_company_requests.each do |in_company_request| %>
               <div class="col-md-4">
-                <h4>in_company_request.company_name</h4>
+                <h4><%= in_company_request.company_name %></h4>
               </div>
               <div class="col-md-4">
-                <h4>in_company_request.email</h4>
+                <h4><%= in_company_request.email %></h4>
               </div>
               <div class="col-md-4">
                 <h4>
-                  <%= link_to "View", admin_in_company_requests_path(in_company_request), class: "btn btn-default" %>
-                  <%= link_to "Edit", edit_admin_in_company_requests_path(in_company_request), class: "btn btn-default" %>
-                  <%= link_to "Delete", admin_in_company_requests_path(in_company_request), class: "btn btn-default", :confirm => "Are you sure?", :method => :delete %>
+                  <%= link_to "View", admin_in_company_request_path(in_company_request), class: "btn btn-default" %>
+                  <%= link_to "Edit", edit_admin_in_company_request_path(in_company_request), class: "btn btn-default" %>
+                  <%= link_to "Delete", admin_in_company_request_path(in_company_request), class: "btn btn-default", :confirm => "Are you sure?", :method => :delete %>
                 </h4>
               </div>
             <% end %>

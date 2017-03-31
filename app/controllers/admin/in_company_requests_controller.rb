@@ -1,6 +1,6 @@
 class Admin::InCompanyRequestsController < ApplicationController
-  before_action :set_workshop, only: [:index, :show ]
-  before_action :set_in_company_requests
+  #before_action :set_workshop, only: [:index, :show ]
+  before_action :set_in_company_requests, only: [:index, :show]
   before_action :set_in_company_request, only: [:show, :edit, :update, :destroy, :create]
 
   def create
@@ -14,6 +14,7 @@ class Admin::InCompanyRequestsController < ApplicationController
   end
 
   def index
+
   end
 
   def show
@@ -21,15 +22,15 @@ class Admin::InCompanyRequestsController < ApplicationController
 
   def update
     if @in_company_request.update_attributes(in_company_request_params)
-      redirect_to admin_in_company_request_url, :notice => "In-Company Request successfully updated"
+      redirect_to admin_in_company_request_url, notice: "In-Company Request successfully updated"
     else
-      redirect_to admin_in_company_request_url, :alert => "Please fill in all required fields"
+      redirect_to admin_in_company_request_url, alert: "Please fill in all required fields"
     end
   end
 
   def destroy
     @in_company_request.destroy
-    redirect_to admin_in_company_request_url, :notice => "In-Company Request has been deleted"
+    redirect_to admin_in_company_request_url, notice: "In-Company Request has been deleted"
   end
 
 
@@ -42,7 +43,7 @@ class Admin::InCompanyRequestsController < ApplicationController
     end
 
     def set_workshop
-      @workshop = Workshop.find(params[:workshop_id])
+      @workshop = Workshop.find(params[:in_company_request.workshop_id])
     end
 
     def set_in_company_requests
