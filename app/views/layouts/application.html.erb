@@ -2,8 +2,6 @@
 <html>
   <head>
     <title>TocFoxes</title>
-    <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -12,9 +10,9 @@
   </head>
 
   <body>
-  </div>
-  <div class="footer">
-  </div>
+    <div class="page-wrap">
     <%= yield %>
+  </div>
+  <%= render 'shared/footer' %>
   </body>
 </html>
