@@ -1,3 +1,5 @@
+<%= form_for new_admin_sponsor_path(@sponsor) do |f| %>
+
   <% @sponsor.errors.full_messages.each do |error| %>
     <p class="alert alert-danger" role="alert"><%= error %></p>
   <% end %>
@@ -14,4 +16,5 @@
 
   <div class="actions">
     <p align="right"> <%= f.submit "Save", class: "btn btn-primary" %></p>
-  </div>
+ </div>
+<% end %>
