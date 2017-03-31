@@ -1,17 +1,34 @@
+<div class="form-group">
 <%= form_for([:admin, @event]) do |f| %>
+</div>
 
+<div class="form-group">
   <%= f.label :title %>
   <%= f.text_field :title %>
-
+  </div>
+<div class="form-group">
   <%= f.label :location %>
   <%= f.text_field :location %>
+  </div>
 
+<div class="form-group">
   <%= f.label :spaces_available %>
   <%= f.number_field :spaces_available %>
+  </div>
 
-  <%= f.label :image %>
-  <%= f.text_field :image %>
+<div class="form-group">
+  <%= f.label :date %>
+  <%= f.date_select :date %>
+  </div>
 
+<div class="form-group">
+  <%= f.label :public %>
+  <%= f.check_box :public %>
+  </div>
+
+<div class="form-group">
   <%= f.submit (@event.new_record? ? "Create" : "Update") %>
 
+  
+</div>
 <% end %>

@@ -1,8 +1,18 @@
 <h1>events</h1>
-<img src=<%= @event.image %> style="width:304px;height:228px;">
-<p><%= @event.title %></p>
-<p>Location: <%= @event.location %></p>
-<p>Spaces available: <%= @event.spaces_available %></p>
+<div class="panel panel-primary">
+  <div class="panel-heading"><%= @event.title %></div>
 
-<%= link_to "[Edit]", edit_admin_event_path(@event) %>
-<%= link_to "[Delete]", admin_events_path(@event), method: :destroy, data: { confirm: "Are you sure?" } %>
+  <div class="panel-body">
+
+    <p>Location: <%= @event.location %></p>
+    <p>Spaces available: <%= @event.spaces_available %></p>
+    <p>public: <%= @event.public %></p>
+    <p>Date: <%= @event.date %></p>
+    <img src=<%= @event.image %> style="width:304px;height:228px;">
+
+  </div>
+
+</div>
+
+<%= link_to "Back", admin_events_path, class: "btn btn-default" %>
+<%= link_to "Edit", edit_admin_event_path(@event), class: "btn btn-default" %>
