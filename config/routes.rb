@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   #   resources :attend
   # end
   #resources :sponsor
-  resources :workshop
+  resources :workshops
   #resources :in_company
 
   namespace :admin do
