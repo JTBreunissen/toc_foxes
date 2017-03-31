@@ -1,0 +1,14 @@
+<h1>events</h1>
+ <%= link_to "Add new Event", new_admin_event_path, class: "btn btn-primary" %>
+
+<% @events.each do |event| %>
+<p><strong></strong> <%= event.title %>
+<strong>Location:   </strong><%= event.location %>
+<strong>Spaces available:   </strong><%= event.spaces_available %>
+<p>Date: <%= event.date %></p>
+<%= link_to "[Show]", admin_event_path(event.id) %>
+<%= link_to "[Delete]", admin_events_path(event.id), method: :destroy, data: { confirm: "Are you sure?" } %>
+<%= link_to "[Edit]", edit_admin_event_path(event.id), class: "btn btn-default" %>
+
+<hr>
+<% end %>
