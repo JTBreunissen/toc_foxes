@@ -1,5 +1,6 @@
 Event.delete_all
 Sponsor.delete_all
+InCompanyRequest.delete_all
 
 event1 = Event.create!( { title: "Taste of code", location: "Amsterdam", spaces_available: 678, public: true, image: "https://pbs.twimg.com/media/CuzWcg2XEAAqBM2.jpg", date: 12.days.from_now } )
 event1 = Event.create!( { title: "Taste of BBQ", location: "A place far far away", spaces_available: 2, public: true, image: "http://www.ondernemersscherpenzeel.nl/wp-content/uploads/2016/03/BBQ.jpg", date: 13.days.from_now  } )
