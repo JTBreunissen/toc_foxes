@@ -1,8 +1,11 @@
 class Admin::SponsorsController < ApplicationController
 before_action :set_sponsors
-before_action :set_sponsor, only: [:show, :edit, :update]
+before_action :set_sponsor, only: [:show, :edit, :update, :destroy]
 
   def index
+  end
+
+  def show
   end
 
   def new
@@ -19,7 +22,17 @@ before_action :set_sponsor, only: [:show, :edit, :update]
     end
   end
 
-  def show
+  def update
+    if @sponsor.update_attributes(sponsor_params)
+      redirect_to admin_sponsors_url, :notice => "Sponsor successfully updated"
+    else
+      redirect_to admin_sponsors_url, :alert => "Please fill in all required fields"
+    end
+  end
+
+  def destroy
+      @sponsor.destroy
+      redirect_to admin_sponsors_url, :notice => "Sponsor has been deleted"
   end
 
   private

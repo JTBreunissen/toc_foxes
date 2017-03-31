@@ -16,6 +16,8 @@
             </div>
             <div class="col-md-3 right">
               <%= link_to "View", admin_sponsor_path(sponsor), class: "btn btn-default" %>
+              <%= link_to "Edit", edit_admin_sponsor_path(sponsor), class: "btn btn-default" %>
+              <%= link_to "Delete", admin_sponsor_path(sponsor), class: "btn btn-default", :confirm => "Are you sure?", :method => :delete %>
             </div>
             <% end %>
           </div>
