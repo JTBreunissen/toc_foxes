@@ -24,15 +24,15 @@ before_action :set_sponsor, only: [:show, :edit, :update, :destroy]
 
   def update
     if @sponsor.update_attributes(sponsor_params)
-      redirect_to admin_sponsors_url, :notice => "Sponsor successfully updated"
+      redirect_to admin_sponsor_url, :notice => "Sponsor successfully updated"
     else
       redirect_to admin_sponsors_url, :alert => "Please fill in all required fields"
     end
   end
 
   def destroy
-      @sponsor.destroy
-      redirect_to admin_sponsors_url, :notice => "Sponsor has been deleted"
+    @sponsor.destroy
+    redirect_to admin_sponsors_url, :notice => "Sponsor has been deleted"
   end
 
   private
