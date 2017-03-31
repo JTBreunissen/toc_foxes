@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3><%= @workshop.title %></h3>
+    </div>
+    <div class="panel-body">
+        <p>Description: <%= @workshop.description %></p>
+        <p>Image: <%= image_tag(@workshop.image, size: "400x300") %>
+        <p>Live Demo:<%= video_tag @workshop.link_to_live_demo %>
+        <p>GitHub Link:<%= link_to @workshop.link_to_github %>
+    </div>
+  </div>
+    <%= link_to "Back", admin_workshops_path, class: "btn btn-default" %>
+</div>
