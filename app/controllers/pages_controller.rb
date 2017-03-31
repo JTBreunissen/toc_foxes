@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-before_action :set_sponsors
+before_action :set_sponsors, :set_events
 
   def home
   end
@@ -17,5 +17,9 @@ before_action :set_sponsors
 
   def set_sponsors
     @sponsors = Sponsor.all
+  end
+
+  def set_events
+    @events = Event.all
   end
 end
