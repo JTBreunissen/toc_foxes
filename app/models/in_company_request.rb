@@ -6,7 +6,7 @@ class InCompanyRequest < ApplicationRecord
   validates :email, presence: true
   validates :date, presence: true
   validates :spaces_available, presence: true
-  #validates :workshop_id, presence: true
+
 
 
 end
