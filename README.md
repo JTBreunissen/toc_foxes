@@ -1,24 +1,6 @@
-# README
+# Taste of Code 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby On Rails project, a group project made for the Intermediate Bootcamp @ Codaisseur Academy
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![](http://i.imgur.com/5w0TVwQ.png)
+![](http://i.imgur.com/mp2PhLJ.png)
